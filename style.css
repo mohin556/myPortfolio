@@ -184,6 +184,41 @@ p{
     padding: 100px 0;
     max-width: 1200px;
 }
+#projects .projects-header h2 {
+ margin-bottom: 50px;
+
+}
+#projects .all-projects{
+   
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
+#projects .project-item{
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 80%;
+    margin: 20px auto;
+    overflow: hidden;
+    border-radius: 10px;
+
+
+
+
+}
+#projects .project-info{
+    padding: 30px;
+    flex-basis: 50%;
+    height:100%;
+    display: flex;
+    align-items: center;
+
+}
 
 
 @keyframes text_reval_box{
