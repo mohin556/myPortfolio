@@ -19,8 +19,8 @@ a{
 
 }
 img{
-    height:90%;
-    width: 90%;
+    height:100%;
+    width: 100%;
     object-fit: cover;
 }
 p{
@@ -216,9 +216,161 @@ p{
     flex-basis: 50%;
     height:100%;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    background-color: rgb(110, 133, 125);
+    color: white;
+}
+#projects .project-info h1 {
+    font-size: 3rem;
+    font-weight: 500;
+}
+#projects .project-info h2 {
+    font-size: 1.8rem;
+    font-weight: 500;
+    margin-top: 10px;
+}
+#projects .project-img{
+   flex-basis: 50%;
+   height: 300px;
+   overflow: hidden;
+   position: relative;
+}
+
+#projects .project-img:after{
+   content: '';
+   position: absolute;
+   left: 0;
+   top: 0;
+   height: 100%;
+   width: 100%;
+   background-image: linear-gradient(60deg,#29323c 0%,#485563 100%);
+   opacity: .5;
+
 
 }
+#projects .project-img img{
+    transition: .3s ease  ;
+}
+
+#projects .project-item:hover .project-img img{
+    transform: scale(1.2);
+}
+
+
+/*About part */
+
+#about .about{
+    flex-direction: column-reverse;
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 100px 20px;
+}
+#about .about-left{
+    width: 250px;
+    width: 360px;
+}
+#about .about-right{
+   width: 100%;
+}
+#about .about-right h2{
+    font-size: 1.8rem;
+    font-weight: 500;
+    letter-spacing: .2rem;
+    margin-bottom: 10px;
+}
+#about .about-right p {
+    margin-bottom: 20px;
+}
+#about .about-right .cta {
+    color: black;
+    margin-bottom: 50px;
+    padding: 10px 20px;
+    font-size: 2rem;
+    border: 3px solid red;
+}
+#about .about-left .about-img {
+    position: relative;
+    height: 100%;
+    width: 100%;
+  
+    border: 10px solid white;
+
+
+}
+#about .about-left .about-img:after{
+    content: '';
+    position: absolute;
+    left: -33px;
+    top: 20px;
+    height: 98%;
+    width: 98%;
+    border: 7px solid crimson;
+    z-index: -1;
+}
+
+
+
+/*Contact part */
+
+#contact .contact{
+    flex-direction: column;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+#contact .contact-items{
+    width: 400px;
+   
+}
+#contact .contact-item{
+    width: 80%;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    padding: 30px;
+    margin: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0px 0px 18px 0 #0000002c;
+    transition: .3s ease box-shadow;
+}  
+
+#contact .contact-item:hover{
+    box-shadow: 0px 0px 5px 0 #0000002c;
+}
+#contact .icon{
+    width: 70px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+}
+#contact .contact-info h1{
+ font-size: 2.5rem;
+ font-weight: 500;
+ margin-bottom: 5px;
+}
+
+#contact .contact-info h2{
+  
+    font-size: 1.3rem;
+    line-height: 2rem;
+    font-weight: 500;
+
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 @keyframes text_reval_box{
@@ -244,7 +396,7 @@ p{
 }
 
 
-#hero .cta{
+ .cta{
     display: inline-block;
     padding: 10px 30px;
     color: white;
@@ -257,7 +409,7 @@ p{
     transition: 3s ease;
     transition-property: background-color,color;
 }
-#hero .cta:hover{
+ .cta:hover{
     color:white;
     background-color: crimson;
 }
