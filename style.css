@@ -98,6 +98,14 @@ p{
     animation: text_reval_box 1s ease;
     animation-delay: .3s;
 }
+.brand h1{
+    font-size: 3rem;
+    color: white;
+    text-transform: uppercase;  
+}
+.brand h1 span{
+    color: crimson;
+}
 
 /* Servicess Part */
 
@@ -361,8 +369,43 @@ p{
 
 }
 
+#footer{
+    background-image: linear-gradient(60deg, #29323c 0%, #485563 100% );
+}
+#footer .footer{
+    min-height: 200px;
+    flex-direction: column;
+    padding-top: 50px;
+    padding-bottom: 10px;
+}
+#footer h2{
+    color: white;
+    font-weight: 500;
+    font-size: 1.8rem;
+    letter-spacing: .1rem;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+#footer .social-icon{
+    display: flex;
+    margin-bottom: 30px;
+    justify-content: center;
+    align-items: center;
 
+}
 
+#footer .social-item{
+    height: 50px;
+    width: 50px;
+    margin: 0 5px;
+}
+#footer .social-item img{
+    filter: grayscale(1);
+    transition: .3s ease filter;
+}
+#footer .social-item:hover img{
+    filter: grayscale(0);
+}
 
 
 
@@ -412,4 +455,45 @@ p{
  .cta:hover{
     color:white;
     background-color: crimson;
+}
+
+/* responsive for tab */
+
+@media only screen and (min-width: 768px) {
+    .cta{
+        font-size: 2.5rem;
+        padding: 20px 60px;
+    }
+    h1.section-title{
+        font-size: 6rem;
+        
+    }
+    #hero h1 {
+        font-size: 7rem;
+    }
+    /* service section */
+    #services .service-bottom .service-item{
+        flex-basis: 45%;
+        margin: 1.5%;
+    }
+    /* projects section */
+    #projects .project-item{
+        height: 400px;
+        margin: 0;
+        width: 100%;
+        border-radius: 0;
+    }
+     #projects .project-item{
+        flex-direction: row;
+
+     }
+     #projects .project-item:nth-child(even){
+        flex-direction: row-reverse;
+     }
+     #projects .all-projects .project-info {
+        height: 100%;
+     }
+     #projects .all-projects .project-img{
+        height: 100%;
+     }
 }
